@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form  th:action="@{/aktualizuj}" th:object="${ksiazka}">
+
+  <table>
+    <tr>
+      <td>Podaj imię Autora </td>
+      <td><input name="imieAutora" th:field="*{imieAutora}"> </td>
+    </tr>
+    <tr>
+      <td>Podaj nazwisko </td>
+      <td><input name="nazwiskoAutora" th:field="*{nazwiskoAutora}"> </td>
+    </tr>
+    <tr>
+      <td>Podaj nazwę </td>
+      <td><input name="nazwa" th:field="*{nazwa}"> </td>
+    </tr>
+    <tr>
+      <td>Podaj gatunek </td>
+      <td><input name="gatunek" th:field="*{gatunek}">
+        <input type="hidden" name="id" th:field="*{id}"></td>
+    </tr>
+    <td colspan="1">
+      <input type="submit"></td>
+  </table>
+</body>
+</html>
